@@ -14,29 +14,17 @@
 		B5CE5A252F4CD12100545B4E /* Exceptions for "FileManager" folder in "FileManager" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				.swift,
 				Info.plist,
 			);
 			target = B5C351C42F4CC89D0049B6E4 /* FileManager */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B5CE5A282F4CD54500545B4E /* Exceptions for "FileManager" folder in "Compile Sources" phase from "FileManager" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = B5C351C12F4CC89D0049B6E4 /* Sources */;
-			membershipExceptions = (
-				.swift,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B5C351C72F4CC89D0049B6E4 /* FileManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				B5CE5A252F4CD12100545B4E /* Exceptions for "FileManager" folder in "FileManager" target */,
-				B5CE5A282F4CD54500545B4E /* Exceptions for "FileManager" folder in "Compile Sources" phase from "FileManager" target */,
 			);
 			path = FileManager;
 			sourceTree = "<group>";
@@ -119,6 +107,8 @@
 			);
 			mainGroup = B5C351BC2F4CC89D0049B6E4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B5C351C62F4CC89D0049B6E4 /* Products */;
 			projectDirPath = "";
