@@ -10,9 +10,34 @@
 		B5C351C52F4CC89D0049B6E4 /* FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B5CE5A252F4CD12100545B4E /* Exceptions for "FileManager" folder in "FileManager" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				.swift,
+				Info.plist,
+			);
+			target = B5C351C42F4CC89D0049B6E4 /* FileManager */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		B5CE5A282F4CD54500545B4E /* Exceptions for "FileManager" folder in "Compile Sources" phase from "FileManager" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = B5C351C12F4CC89D0049B6E4 /* Sources */;
+			membershipExceptions = (
+				.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B5C351C72F4CC89D0049B6E4 /* FileManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B5CE5A252F4CD12100545B4E /* Exceptions for "FileManager" folder in "FileManager" target */,
+				B5CE5A282F4CD54500545B4E /* Exceptions for "FileManager" folder in "Compile Sources" phase from "FileManager" target */,
+			);
 			path = FileManager;
 			sourceTree = "<group>";
 		};
@@ -256,6 +281,8 @@
 				DEVELOPMENT_TEAM = KSSD7A7UK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FileManager/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к галерее";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -289,6 +316,8 @@
 				DEVELOPMENT_TEAM = KSSD7A7UK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FileManager/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Приложению нужен доступ к галерее";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
