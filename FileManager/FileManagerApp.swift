@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct FileManagerApp: App {
+    @State private var isLoggedIn: Bool = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLoggedIn {
+                MainTabView()
+            } else {
+                LoginView {
+                    isLoggedIn = true
+                }
+            }
         }
     }
 }

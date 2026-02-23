@@ -12,18 +12,23 @@ final class Model: ObservableObject {
     let path: String = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 
     @Published var items: [String] = []
+    
+    private var cancellables = Set<AnyCancellable>()
+    private let settings = SettingsStore.shared
 
     init() {
+        settings.$sortAscending
+            .sink { [weak self] _ in self?.loadItems() }
+            .store(in: &cancellables)
         print("Documents:", path)
-
-        loadItems()
     }
 
     func loadItems() {
         let all = (try? FileManager.default.contentsOfDirectory(atPath: path)) ?? []
-        items = all
-            .filter { $0.hasSuffix(".jpg") || $0.hasSuffix(".jpeg") || $0.hasSuffix(".png") }
-            .sorted()
+        let filtered = all.filter {
+            $0.hasSuffix(".jpg") || $0.hasSuffix(".jpeg") || $0.hasSuffix(".png")
+        }
+        items = settings.sortAscending ? filtered.sorted() : filtered.sorted().reversed()
     }
 
     func addImage(named filename: String, data: Data) {
