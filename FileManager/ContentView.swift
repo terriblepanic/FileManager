@@ -8,6 +8,22 @@
 import SwiftUI
 import PhotosUI
 
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            ContentView()
+                .tabItem {
+                    Label("Файлы", systemImage: "photo.on.rectangle")
+                }
+            SettingsView()
+                .tabItem {
+                    Label("Настройки", systemImage: "gearshape.fill")
+                }
+        }
+        .tint(Color(red: 0.24, green: 0.78, blue: 0.58))
+    }
+}
+
 struct ContentView: View {
     @StateObject private var model = Model()
 
